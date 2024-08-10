@@ -331,6 +331,7 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: 500;
 }
 
 .site-navbar ul {
@@ -455,13 +456,6 @@ button {
     
 }
 
-.full_bg {
-    background: url(../images/banner.jpg);
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
 
 .slider_main {
     padding: 30px 0;
