@@ -434,15 +434,27 @@ button {
 
 
 /** banner section **/
-.banner{
-    background: url(../images/PD.webp);
+.banner {
+    background: url(../images/banner.png);
     width: 100%;
     height: 500px;
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
-
+    position: relative; /* สำคัญสำหรับการใช้ absolute position ใน h1 */
 }
+
+.banner h1.type {
+    position: absolute;
+    top: 50%; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    left: 50%; /* จัดให้อยู่กึ่งกลางแนวนอน */
+    transform: translate(-50%, -50%); /* เพื่อปรับให้อยู่กึ่งกลางจริง ๆ */
+    color: white; /* เปลี่ยนสีข้อความเป็นสีขาว */
+    font-size: 3em; /* ขนาดตัวอักษร */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    
+}
+
 .full_bg {
     background: url(../images/banner.jpg);
     height: 100vh;
@@ -1188,8 +1200,8 @@ ul.top_infomation li a:hover {
 
 .copyright {
     margin-top: 20px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background: #fefefd;
 }
 
