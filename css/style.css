@@ -85,6 +85,7 @@ h1 {
 
 h2 {
     font-size: 22px;
+    font-weight: 500;
 }
 
 h3 {
@@ -132,6 +133,9 @@ ol {
     margin: 0px;
     padding: 0px;
     list-style: none;
+    color: #121212;
+    font-size: 18px;
+    text-align: start;
 }
 
 p {
@@ -445,18 +449,6 @@ button {
     position: relative; /* สำคัญสำหรับการใช้ absolute position ใน h1 */
 }
 
-.banner h1.type {
-    position: absolute;
-    top: 50%; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
-    left: 50%; /* จัดให้อยู่กึ่งกลางแนวนอน */
-    transform: translate(-50%, -50%); /* เพื่อปรับให้อยู่กึ่งกลางจริง ๆ */
-    color: white; /* เปลี่ยนสีข้อความเป็นสีขาว */
-    font-size: 3em; /* ขนาดตัวอักษร */
-    text-align: center; /* จัดข้อความให้อยู่กลาง */
-    
-}
-
-
 .slider_main {
     padding: 30px 0;
 }
@@ -537,7 +529,7 @@ button {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 500;
     overflow: hidden;
     white-space: nowrap;
     border-right: 2px solid;
