@@ -135,7 +135,6 @@ ol {
     list-style: none;
     color: #121212;
     font-size: 18px;
-    text-align: start;
 }
 
 p {
@@ -535,6 +534,7 @@ button {
     border-right: 2px solid;
     animation: type 1.5s steps(90) 1.5s 1 normal both, cursor 1s step-end infinite;
     position: relative;
+    padding-bottom: 1rem;
 }
 @keyframes type {
     from {
@@ -552,6 +552,14 @@ button {
     }
   }
   
+
+  .data{
+    line-height: 1.8;
+    text-align: start;
+  }
+  .data ol,ul{
+font-size: 20px;
+  }
 /* pulse wave */
 
 .play-btn::before {
