@@ -534,7 +534,8 @@ button {
     border-right: 2px solid;
     animation: type 1.5s steps(90) 1.5s 1 normal both, cursor 1s step-end infinite;
     position: relative;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 @keyframes type {
     from {
