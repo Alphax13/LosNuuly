@@ -558,8 +558,12 @@ button {
     text-align: start;
   }
   .data ol,ul{
-font-size: 20px;
+font-size: 22px;
   }
+  .data p{
+    font-size: 20px;
+    padding-left: 50px;
+      }
 /* pulse wave */
 
 .play-btn::before {
