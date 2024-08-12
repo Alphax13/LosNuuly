@@ -607,8 +607,18 @@ font-size: 22px;
         
     }
     th, td {
-        padding: 8px;
+        padding: 5px;
         text-align: left;
+        
+    }
+    
+    th:nth-child(1), td:nth-child(1) {
+        width: 60%; /* First column takes up 50% of the table width */
+    }
+    
+    th:nth-child(2), td:nth-child(2),
+    th:nth-child(3), td:nth-child(3) {
+        width: 30%; /* Second and third columns take up 25% each */
     }
 /* pulse wave */
 
