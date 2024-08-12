@@ -226,14 +226,14 @@
                prison: "5"
            },
            {
-            name: "<strong>อนาจารในพื้นที่สาธารณะ </strong>",
-            fine: "2,000",
-            prison: "5"
+            name: "<strong>หมิ่นประมาท </strong>",
+            fine: "1,500",
+            prison: "10"
         },
            {
-               name: "<strong>หลบหนี </strong> <br> <span style='color: red;'>หากจับกุมแล้วยังหลบหนีต่อ จะโดนข้อหา 'หลบหนีหลังการจับกุม' เพิ่ม</span>",
-               fine: "1,000",
-               prison: "5"
+               name: "<strong>รับของโจร </strong>",  
+               fine: "0",
+               prison: "15"
            },
            {
                name: "<strong>หลบหนีหลังการจับกุม</strong> <br> อายุความ 12 ชั่วโมง<br> <span style='color: red;'>เจตนาที่จะหลบหนีต่อ หลังถูกล็อคมือ หรือหลังถูกจับกุมตัวแล้ว </span>",
