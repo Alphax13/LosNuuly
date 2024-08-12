@@ -52,7 +52,7 @@
            {
                name: "ถุงห่อศพ",
                fine: "5,000 EA",
-               prison: "0"
+               prison: "-"
            },
            {
                name: "โลมา",
@@ -170,7 +170,7 @@
            {
                name: "<strong>ปิดบังใบหน้า </strong>",
                fine: "2,000",
-               prison: "0"
+               prison: "-"
            },
            {
                name: "<strong>ถืออาวุธในพื้นที่สาธารณะ </strong>",
@@ -219,82 +219,87 @@
            },
        ];
        // ข้อมูลค่าปรับและจำคุก ตาราง5
-       const penaltyData5 = [
-            {
+       const penaltyData5 = [{
                name: "<strong>อนาจารในพื้นที่สาธารณะ </strong>",
                fine: "2,000",
                prison: "5"
            },
            {
-            name: "<strong>หมิ่นประมาท </strong>",
-            fine: "1,500",
-            prison: "10"
-        },
+               name: "<strong>หมิ่นประมาท </strong>",
+               fine: "1,500",
+               prison: "10"
+           },
            {
-               name: "<strong>รับของโจร </strong>",  
-               fine: "0",
+               name: "<strong>รับของโจร </strong>",
+               fine: "-",
                prison: "15"
            },
            {
-               name: "<strong>หลบหนีหลังการจับกุม</strong> <br> อายุความ 12 ชั่วโมง<br> <span style='color: red;'>เจตนาที่จะหลบหนีต่อ หลังถูกล็อคมือ หรือหลังถูกจับกุมตัวแล้ว </span>",
-               fine: "3,000",
-               prison: "15"
-           },
-           {
-               name: "<strong><span style='color: red;'>ก่อกวน สร้างความเดือดร้อน</span></strong> <br> <span style='color: red;'>รบกวนใช้เสียง,ทะเลาะวิวาท,ขัดขวางการทำงานเจ้าหน้าที่ / คดีแดง / ไม่สามารถประกันเวลาได้</span>",
+               name: "<strong>ให้การเท็จ </strong>",
                fine: "1,500",
                prison: "15"
            },
            {
-               name: "<strong>ปิดบังใบหน้า </strong>",
-               fine: "2,000",
-               prison: "0"
-           },
-           {
-               name: "<strong>ถืออาวุธในพื้นที่สาธารณะ </strong>",
-               fine: "2,000",
-               prison: "10"
-           },
-           {
-               name: "<strong>พื้นที่สุ่มเสี่ยง </strong> <br> <span style='color: red;'>อยู่ในพื้นที่ผิดกฎหมายทุกที่, หรืออยู่ในพื้นที่อันตราย , อยู่ในพื้นที่ผิดกฎหมายและไม่มีของในตัว</span>",
-               fine: "2,000",
-               prison: "5"
-           },
-           {
-               name: "<strong>วางเพลิง </strong> <br> <span style='color: red;'> ทุกชนิด / ระเบิดปั้ม </span>",
-               fine: "3,000",
+               name: "<strong>พยานเท็จ </strong>",
+               fine: "1,500",
                prison: "15"
            },
            {
-               name: "<strong>อยู่ในพื้นที่บริเวณที่ไม่ได้รับอนุญาติ </strong>",
-               fine: "1,000",
-               prison: "10"
+               name: "<strong>ติดสินบนเจ้าหน้าที่ </strong>",
+               fine: "1,500",
+               prison: "15"
            },
            {
-               name: "<strong>บุกรุกพื้นที่ส่วนบุคคล </strong>",
-               fine: "4,000",
-               prison: "10"
+               name: "<strong>ไม่ให้ความร่วมมือเจ้าหน้าที่</strong> <br> <span style='color: red;'>รวมถึงแจ้งความเท็จ หรือ ให้การเท็จ</span>",
+               fine: "1,500",
+               prison: "15"
            },
            {
-               name: "<strong><span style='color: red;'>แหกคุก</span></strong> <br> <span style='color: red;'>คดีแดง / ไม่สามารถประกันเวลาได้</span>",
-               fine: "3,500",
-               prison: "10"
-           },
-           {
-               name: "<strong><span style='color: red;'>ก่อเหตุบริเวณสถานที่ราชการ</span></strong> <br> อายุความ 24 ชั่วโมง <br> <span style='color: red;'>คดีแดง / ไม่สามารถประกันเวลาได้</span>",
-               fine: "20,000",
-               prison: "60"
-           },
-           {
-               name: "<strong><span style='color: red;'>ขัดขวางการส่งตัวนักโทษ</span></strong> <br> <span style='color: red;'>คดีแดง / ไม่สามารถประกันเวลาได้</span>",
+               name: "<strong><span style='color: red;'>ทำลายทรัพย์สินของผู้อื่น </span></strong> <br> <span style='color: red;'>เและต้องชดใช้ค่าเสียหาย 3,000 คดีแดง / ไม่สามารถประกันเวลาได้</span></strong> ",
                fine: "3,000",
                prison: "10"
            },
            {
-               name: "<strong>ทำลายหลักฐาน</strong> <br> <span style='color: red; font-size: 18px'>เก็บเข้าตู้เซฟ ฝากเพื่อน เก็บในรถ หรือ ตำรวจเห็น แล้วมาค้นตัวไม่เจออะไร ในขณะที่ทำผิดมาแล้ว ถือว่าทำลายหลักฐาน ยกเว้นฝากเพื่อนแต่ยังพบของกลางอยู่ จะถือว่าเป็นการสมรู้ร่วมคิด</span></strong> ",
-               fine: "4,000",
+               name: "<strong><span style='color: red;'>ช่วยเหลือผู้กระทำความผิด</span></strong> <br> <span style='color: red;'>คดีแดง / ไม่สามารถประกันเวลาได้</span></strong> ",
+               fine: "3,000",
                prison: "10"
            },
+           {
+               name: "<strong><span style='color: red;'>ขัดขวางการทำงานเจ้าหน้าที่</span></strong> <br> <span style='color: red;'>โดนทุกคนที่อยู่บนรถ หรือ บริเวรจุดเกิดเหตุ / คดีแดง / ไม่สามารถประกันเวลาได้</span></strong> ",
+               fine: "3,000",
+               prison: "10"
+           },
+           {
+               name: "<strong><span style='color: red;'>แอบอ้างเป็นเจ้าหน้าที่</span></strong> <br> <span style='color: red;'>ใส่เครื่องแบบตำรวจ ( ซองปืน,ป้ายตำรวจ,เสื้อผ้าตำรวจ ) / หากใช้ก่อเหตุ จะไม่มีการตักเตือนทุกกรณี / คดีแดง</span></strong> ",
+               fine: "20,000",
+               prison: "30"
+           },
+           {
+               name: "<strong><span style='color: red;'>หลอกลวง , ฉ้อโกง</span></strong> <br> อายุความ 48 ชั่วโมง <br> <span style='color: red;'>คดีแดง / ไม่สามารถประกันเวลาได้</span></strong> ",
+               fine: "5,000",
+               prison: "20"
+           },
+           {
+               name: "<strong>พรบ. คอมพิวเตอร์</strong> <br> <span style='color: red;'>(หากพูดหรือโพสเกี่ยวกับสิ่งผิดกฎหมายทุกรูปแบบ)</span></strong> ",
+               fine: "3,000",
+               prison: "-"
+           },
+           {
+            name: "<strong>วิทยุสื่อสาร</strong> <br> <span style='color: red;'>(ในกรณีผู้กระทำความผิดกำลังหลบหนีและเพื่อนมาช่วย) **ยึด** / คดีแดงเคสแดงอื่นๆไม่ยึด</span></strong> ",
+            fine: "2,000",
+            prison: "-"
+        },
+        {
+            name: "<strong><span style='color: red;'>บุกรุกสถานที่ราชการ</span></strong> <br> <span style='color: red;'>เรือนจำ,สถานีตำรวจ,โรงพยาบาล / คดีแดง</span></strong> ",
+            fine: "2,000",
+            prison: "15"
+        },
+        {
+            name: "<strong>สมรู้ร่วมคิด</strong> ",
+            fine: "2,000",
+            prison: "10"
+        },
+
        ];
 
 
