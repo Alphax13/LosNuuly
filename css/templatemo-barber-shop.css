@@ -218,9 +218,9 @@ strong {
   NAVIGATION              
 -----------------------------------------*/
 .sidebar {
-  background: linear-gradient(120deg, var(--primary-color), var(--custom-btn-bg-color));
-  background-size: 200% 200%;
-  animation: gradientAnimation 5s ease infinite;
+  background-image: url(/images/bg.jpg);
+  background-size: cover;
+  animation: gradientAnimation 10s ease infinite;
   position: fixed;
   top: 0;
   bottom: 0;
