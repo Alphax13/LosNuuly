@@ -14,9 +14,9 @@
 
   --body-font-family:             "Kanit", sans-serif;
 
-  --h1-font-size:                 74px;
-  --h2-font-size:                 46px;
-  --h3-font-size:                 32px;
+  --h1-font-size:                 50px;
+  --h2-font-size:                 40px;
+  --h3-font-size:                 30px;
   --h4-font-size:                 28px;
   --h5-font-size:                 24px;
   --h6-font-size:                 22px;
@@ -160,7 +160,7 @@ strong {
 }
 
 .custom-block-bg-overlay-wrap:hover {
-  background: linear-gradient(90deg, #FDBB2D 0%, #c37822 100%);
+  background: linear-gradient(90deg, #9d9d9d 0%, #ff7606 100%);
   transform: scale(1.05);
 }
 
@@ -218,24 +218,38 @@ strong {
   NAVIGATION              
 -----------------------------------------*/
 .sidebar {
-  background: var(--primary-color);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(120deg, var(--primary-color), var(--custom-btn-bg-color));
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s ease infinite;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
+  width: 250px;
   z-index: 100;
-  padding: 50px 0 0;
+  padding: 50px 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.sidebar-sticky {
-  height: calc(100vh - 48px);
-  overflow-x: hidden;
-  overflow-y: auto;
-  text-align: center;
-  position: relative;
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.sidebar:hover {
+  width: 300;
 }
 
 .navbar {
@@ -246,13 +260,14 @@ strong {
 .logo-image {
   width: 154px;
   height: auto;
-  margin-bottom: 70px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 #sidebarMenu .nav-link {
   color: var(--dark-color);
   font-size: var(--p-font-size);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-normal);
   text-transform: uppercase;
   position: relative;
 }
@@ -260,6 +275,7 @@ strong {
 #sidebarMenu .nav-link.active, 
 #sidebarMenu .nav-link:hover {
   color: var(--white-color);
+  font-weight: var(--font-weight-bold);
 }
 
 .navbar-toggler {
@@ -449,6 +465,7 @@ strong {
   background-size: cover;
   position: relative;
   text-align: center;
+  height: 300px;
 }
 
 .featured-section h2 {
@@ -770,7 +787,7 @@ strong {
 
   .section-padding,
   .hero-section {
-    padding: 50px 25px;
+    padding: 100px 25px;
   }
 
   .custom-block {
