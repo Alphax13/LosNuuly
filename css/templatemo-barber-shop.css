@@ -8,7 +8,7 @@
   --custom-btn-bg-color:          #c12828;
   --custom-btn-bg-hover-color:    #FDBB2D;
   --dark-color:                   #000000;
-  --p-color:                      #ffffff;
+  --p-color:                      #000000;
   --border-color:                 #7fffd4;
   --link-hover-color:             #B22727;
 
@@ -35,9 +35,8 @@
 }
 
 body {
-  background-color: var(--dark-color);
+  background: linear-gradient(80deg, #ffffff 0%, #ffd2ad 100%);
   font-family: var(--body-font-family); 
-  color: var(--white-color);
 }
 
 
@@ -48,7 +47,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--white-color);
+  color: var(--dark-color);
 }
 
 h1,
@@ -69,7 +68,6 @@ h1 {
 
 h2 {
   font-size: var(--h2-font-size);
-  text-shadow: 0px 0px 5px #ff7606, 0px 0px 10px #303030;
 }
 
 h3 {
