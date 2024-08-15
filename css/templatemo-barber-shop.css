@@ -8,7 +8,7 @@
   --custom-btn-bg-color:          #c12828;
   --custom-btn-bg-hover-color:    #FDBB2D;
   --dark-color:                   #000000;
-  --p-color:                      #000000;
+  --p-color:                      #ffffff;
   --border-color:                 #7fffd4;
   --link-hover-color:             #B22727;
 
@@ -20,7 +20,7 @@
   --h4-font-size:                 26px;
   --h5-font-size:                 24px;
   --h6-font-size:                 22px;
-  --p-font-size:                  16px;
+  --p-font-size:                  18px;
   --btn-font-size:                16px;
   --copyright-font-size:          14px;
 
@@ -35,8 +35,9 @@
 }
 
 body {
-  background-color: var(--white-color);
+  background-color: var(--dark-color);
   font-family: var(--body-font-family); 
+  color: var(--white-color);
 }
 
 
@@ -47,7 +48,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--dark-color);
+  color: var(--white-color);
 }
 
 h1,
@@ -123,7 +124,7 @@ strong {
   SECTION               
 -----------------------------------------*/
 .section-padding {
-  padding: 100px 50px;
+  padding: 50px 30px;
 }
 
 .section-bg {
