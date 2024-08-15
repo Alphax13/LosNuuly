@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
   --white-color:                  #ffffff;
@@ -12,15 +12,15 @@
   --border-color:                 #7fffd4;
   --link-hover-color:             #B22727;
 
-  --body-font-family:             "Kanit", sans-serif;
+  --body-font-family:             "Bai Jamjuree", sans-serif;
 
-  --h1-font-size:                 50px;
-  --h2-font-size:                 40px;
-  --h3-font-size:                 30px;
-  --h4-font-size:                 28px;
+  --h1-font-size:                 40px;
+  --h2-font-size:                 30px;
+  --h3-font-size:                 28px;
+  --h4-font-size:                 26px;
   --h5-font-size:                 24px;
   --h6-font-size:                 22px;
-  --p-font-size:                  20px;
+  --p-font-size:                  16px;
   --btn-font-size:                16px;
   --copyright-font-size:          14px;
 
@@ -218,9 +218,11 @@ strong {
   NAVIGATION              
 -----------------------------------------*/
 .sidebar {
-  background-image: url(/images/bg.jpg);
-  background-size: cover;
-  animation: gradientAnimation 10s ease infinite;
+  background: 
+    linear-gradient(120deg, var(--primary-color), var(--custom-btn-bg-hover-color)),
+    repeating-linear-gradient(45deg, rgba(255, 0, 0, 0.05) 0px, rgba(255, 0, 0, 0.05) 2px, transparent 2px, transparent 4px);
+  background-size: 200% 200%, 20px 20px;
+  animation: gradientAnimation 15s ease infinite;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -234,22 +236,44 @@ strong {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.sidebar::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 10.5%);
+  background-size: 50px 50px;
+  animation: bubbleAnimation 10s linear infinite;
 }
 
 @keyframes gradientAnimation {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 50%, 0 0;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 50%, 0 0;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 50%, 0 0;
+  }
+}
+
+@keyframes bubbleAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
 .sidebar:hover {
-  width: 300;
+  width: 280px;
 }
 
 .navbar {
