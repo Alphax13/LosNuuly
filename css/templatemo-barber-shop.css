@@ -34,10 +34,10 @@
   --font-weight-normal:           500;
   --font-weight-bold:             700;
 
+  color-scheme: light only;
 	--line: color-mix(in lch, canvasText 25%, transparent);
   --content-size: 620px;
   --eclipse: 60%;
-    color-scheme: light only;
 }
 
 body {
@@ -48,6 +48,7 @@ body {
   background-color: #ffff;
   font-family: var(--body-font-family);
 }
+
 
 body::before {
   --size: 65px;
@@ -246,8 +247,8 @@ strong {
 -----------------------------------------*/
 .sidebar {
   background: 
-      linear-gradient(120deg, var(--primary-color), var(--custom-btn-bg-hover-color)),
-      repeating-linear-gradient(45deg, rgba(255, 0, 0, 0.05) 0px, rgba(255, 0, 0, 0.05) 2px, transparent 2px, transparent 4px);
+    linear-gradient(120deg, var(--primary-color), var(--custom-btn-bg-hover-color)),
+    repeating-linear-gradient(45deg, rgba(255, 0, 0, 0.05) 0px, rgba(255, 0, 0, 0.05) 2px, transparent 2px, transparent 4px);
   background-size: 200% 200%, 20px 20px;
   animation: gradientAnimation 15s ease infinite;
   position: fixed;
@@ -403,35 +404,6 @@ strong {
   top: 8px;
 }
 
-@media (max-width: 767px) {
-  .sidebar {
-      display: none;
-  }
-
-  .navbar-toggler {
-      display: block;
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      z-index: 1000;
-  }
-
-  #mobileMenu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: var(--primary-color);
-      padding: 20px;
-      z-index: 999;
-  }
-
-  #mobileMenu .nav-link {
-      color: var(--white-color);
-      font-size: 18px;
-      padding: 10px 0;
-  }
-}
 
 /*---------------------------------------
   HERO        
