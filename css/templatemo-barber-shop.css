@@ -47,7 +47,7 @@ body {
 :root {
 	color-scheme: light only;
 	--line: color-mix(in lch, canvasText 25%, transparent);
-  --content-size: 520px;
+  --content-size: 620px;
   --eclipse: 60%;
 }
 
@@ -72,19 +72,6 @@ body::before {
   z-index: -1;
 }
 
-
-a:not(.bear-link) {
-	padding: 1rem 2rem;
-	border-radius: 12px;
-	color: var(--bg);
-	text-decoration-line: none;
-	background: var(--color);
-	font-weight: bold;
-justify-self: end;
-}
-
-
-
 h2,
 h3,
 h4,
@@ -101,8 +88,6 @@ h5,
 h6 {
   font-weight: var(--font-weight-bold);
 }
-
-
 
 h1 {
   font-size: var(--h1-font-size);
@@ -916,7 +901,6 @@ strong {
   }
 }
 
-
 .column{
   flex: 30%;
   max-width: 30%;
@@ -935,18 +919,4 @@ strong {
 }
 .img-hover-zoom:hover img{
   transform: scale(1.5);
-}
-
-@media screen and (max-width: 800px) {
-  .column{
-      flex: 50%;
-      max-width: 50%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .column{
-      flex: 100%;
-      max-width: 100%;
-  }
 }
