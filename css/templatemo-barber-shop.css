@@ -1,27 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+/*
+
+TemplateMo 585 Barber Shop
+
+https://templatemo.com/tm-585-barber-shop
+
+*/
 
 
+/*---------------------------------------
+  CUSTOM PROPERTIES ( VARIABLES )             
+-----------------------------------------*/
 :root {
   --white-color:                  #ffffff;
-  --primary-color:                #ff7606;
-  --secondary-color:              #ff7606;
+  --primary-color:                #d6a354;
+  --secondary-color:              #c12828;
   --section-bg-color:             #f0f8ff;
   --custom-btn-bg-color:          #c12828;
   --custom-btn-bg-hover-color:    #FDBB2D;
   --dark-color:                   #000000;
-  --p-color:                      #000000;
+  --p-color:                      #717275;
   --border-color:                 #7fffd4;
   --link-hover-color:             #B22727;
 
-  --body-font-family:             "Bai Jamjuree", sans-serif;
+  --body-font-family:             'Unbounded', cursive;
 
-  --h1-font-size:                 40px;
-  --h2-font-size:                 30px;
-  --h3-font-size:                 28px;
-  --h4-font-size:                 26px;
+  --h1-font-size:                 74px;
+  --h2-font-size:                 46px;
+  --h3-font-size:                 32px;
+  --h4-font-size:                 28px;
   --h5-font-size:                 24px;
   --h6-font-size:                 22px;
-  --p-font-size:                  16px;
+  --p-font-size:                  20px;
   --btn-font-size:                16px;
   --copyright-font-size:          14px;
 
@@ -30,47 +39,20 @@
   --border-radius-small:          10px;
 
   --font-weight-thin:             200;
-  --font-weight-light:            500;
-  --font-weight-normal:           500;
+  --font-weight-light:            300;
+  --font-weight-normal:           400;
   --font-weight-bold:             700;
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-  min-height: 100vh;
-  color: var(--color);
-  background-color: #ffff;
-  font-family: var(--body-font-family);
+  background-color: var(--white-color);
+  font-family: var(--body-font-family); 
 }
 
-:root {
-	color-scheme: light only;
-	--line: color-mix(in lch, canvasText 25%, transparent);
-  --content-size: 620px;
-  --eclipse: 60%;
-}
 
-body::before {
-  --size: 65px;
-  content: '';
-  height: 80vh;
-  width: 80vw;
-  position: fixed;
-  background: linear-gradient(
-        90deg,
-        var(--line) 1px,
-        transparent 1px var(--size)
-      )
-      50% 50% / var(--size) var(--size),
-    linear-gradient(var(--line) 1px, transparent 1px var(--size)) 50% 50% /
-      var(--size) var(--size);
-  mask: linear-gradient(-15deg, transparent 70%, #ff6600);
-  top: 0;
-  transform-style: flat;
-  pointer-events: none;
-  z-index: -1;
-}
+/*---------------------------------------
+  TYPOGRAPHY               
+-----------------------------------------*/
 
 h2,
 h3,
@@ -91,7 +73,6 @@ h6 {
 
 h1 {
   font-size: var(--h1-font-size);
-  
 }
 
 h2 {
@@ -152,7 +133,7 @@ strong {
   SECTION               
 -----------------------------------------*/
 .section-padding {
-  padding: 50px 30px;
+  padding: 100px 50px;
 }
 
 .section-bg {
@@ -189,7 +170,7 @@ strong {
 }
 
 .custom-block-bg-overlay-wrap:hover {
-  background: linear-gradient(90deg, #9d9d9d 0%, #ff7606 100%);
+  background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
   transform: scale(1.05);
 }
 
@@ -247,62 +228,24 @@ strong {
   NAVIGATION              
 -----------------------------------------*/
 .sidebar {
-  background: 
-    linear-gradient(120deg, var(--primary-color), var(--custom-btn-bg-hover-color)),
-    repeating-linear-gradient(45deg, rgba(255, 0, 0, 0.05) 0px, rgba(255, 0, 0, 0.05) 2px, transparent 2px, transparent 4px);
-  background-size: 200% 200%, 20px 20px;
-  animation: gradientAnimation 15s ease infinite;
+  background: var(--primary-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
-  width: 250px;
   z-index: 100;
-  padding: 50px 20px;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  padding: 50px 0 0;
 }
 
-.sidebar::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 10.5%);
-  background-size: 50px 50px;
-  animation: bubbleAnimation 10s linear infinite;
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%, 0 0;
-  }
-  50% {
-    background-position: 100% 50%, 0 0;
-  }
-  100% {
-    background-position: 0% 50%, 0 0;
-  }
-}
-
-@keyframes bubbleAnimation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.sidebar:hover {
-  width: 280px;
+.sidebar-sticky {
+  height: calc(100vh - 48px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+  position: relative;
 }
 
 .navbar {
@@ -313,14 +256,13 @@ strong {
 .logo-image {
   width: 154px;
   height: auto;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 70px;
 }
 
 #sidebarMenu .nav-link {
   color: var(--dark-color);
   font-size: var(--p-font-size);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   position: relative;
 }
@@ -328,7 +270,6 @@ strong {
 #sidebarMenu .nav-link.active, 
 #sidebarMenu .nav-link:hover {
   color: var(--white-color);
-  font-weight: var(--font-weight-bold);
 }
 
 .navbar-toggler {
@@ -410,7 +351,7 @@ strong {
   HERO        
 -----------------------------------------*/
 .hero-section {
-  background-image: url('../images/home2.jpg');
+  background-image: url('../images/client-doing-hair-cut-barber-shop-salon.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -431,7 +372,7 @@ strong {
 
 .hero-section::after {
   content: "";
-  background: linear-gradient(90deg, #808080 0%, #ff7606 100%);
+  background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
   position: absolute;
   top: 0;
   right: 0;
@@ -512,13 +453,12 @@ strong {
   FEATURED               
 -----------------------------------------*/
 .featured-section {
-  background-image: url('../images/home.webp');
+  background-image: url('../images/barber-customer-giving-high-five.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   position: relative;
   text-align: center;
-  height: 500px;
 }
 
 .featured-section h2 {
@@ -835,12 +775,12 @@ strong {
   }
 
   h6 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .section-padding,
   .hero-section {
-    padding: 100px 25px;
+    padding: 50px 25px;
   }
 
   .custom-block {
@@ -901,22 +841,3 @@ strong {
   }
 }
 
-.column{
-  flex: 30%;
-  max-width: 30%;
-}
-.img-hover-zoom{
-  height: auto;
-  overflow: hidden;
-  border: 5px solid #ffff;
-}
-.img-hover-zoom img{
-  vertical-align: middle;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  transition:  transform .5s ease;
-}
-.img-hover-zoom:hover img{
-  transform: scale(1.5);
-}
