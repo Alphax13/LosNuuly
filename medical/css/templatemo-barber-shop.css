@@ -2,14 +2,14 @@
 
 :root {
   --white-color:                  #ffffff;
-  --primary-color:                #ff7606;
+  --primary-color:                #ff5506;
   --secondary-color:              #ff7606;
   --section-bg-color:             #f0f8ff;
   --custom-btn-bg-color:          #c12828;
   --custom-btn-bg-hover-color:    #FDBB2D;
   --dark-color:                   #000000;
   --p-color:                      #000000;
-  --border-color:                 #7fffd4;
+  --border-color:                 #ffffff;
   --link-hover-color:             #B22727;
 
   --body-font-family:             "Bai Jamjuree", sans-serif;
@@ -116,6 +116,11 @@ h6 {
   font-size: var(--h6-font-size);
 }
 
+h7 {
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+}
+
 p {
   color: var(--p-color);
   font-size: var(--p-font-size);
@@ -191,7 +196,7 @@ strong {
 }
 
 .custom-block-bg-overlay-wrap:hover {
-  background: linear-gradient(90deg, #9d9d9d 0%, #ff7606 100%);
+  background: linear-gradient(90deg, #ff7606 0%, #ff7606 100%);
   transform: scale(1.05);
 }
 
@@ -329,7 +334,7 @@ strong {
 #sidebarMenu .nav-link {
   color: var(--dark-color);
   font-size: var(--p-font-size);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-normal);
   text-transform: uppercase;
   position: relative;
 }
@@ -337,6 +342,7 @@ strong {
 #sidebarMenu .nav-link.active, 
 #sidebarMenu .nav-link:hover {
   color: var(--white-color);
+  font-weight: var(--font-weight-bold);
 }
 
 .navbar-toggler {
